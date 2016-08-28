@@ -1,15 +1,7 @@
 <ion-header>
   <ion-toolbar>
-    <ion-buttons>
-      <button (click)="dismiss()">
-        <span>Cancel</span>
-      </button>
-    </ion-buttons>
-    <ion-list>
-      <ion-item>
-        <ion-input type="text" autofocus (keyup)="updateSearch()" [(ngModel)]="autocomplete.query" placeholder="Type here"></ion-input>
-      </ion-item>
-    </ion-list>
+    <ion-title>Enter address</ion-title>
+    <ion-searchbar [(ngModel)]="autocomplete.query" [showCancelButton]="true" (ionInput)="updateSearch()" (ionCancel)="dismiss()"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 <ion-content>
